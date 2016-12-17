@@ -117,10 +117,10 @@ tail -n 8 /SCRIPTS/offsite_status.log > email_log.temp
 grep -i -e 'literal data' -e 'start' offsite_running.log  | tail -n1 >> email_log.temp
 echo "
 HERE ARE THE LOGS FOR THE NIGHTLY BACKUP:" >> email_log.temp
-/usr/share/backuppc/bin/BackupPC_zcat /var/lib/backuppc/log/LOG.0.z | egrep -i 'axium01|dc01|win7|atari911-nb' >> email_log.temp 
-egrep -i 'cpool|axium01|dc01|win7|atari911-nb' /var/lib/backuppc/log/LOG >> email_log.temp
-/usr/sbin/ssmtp jspohn@siegfriedeng.com < email_log.temp
-# /usr/sbin/ssmtp rspohn@siegfriedeng.com < email_log.temp 
+/usr/share/backuppc/bin/BackupPC_zcat /var/lib/backuppc/log/LOG.0.z | egrep -i 'computer01|computer02' >> email_log.temp 
+egrep -i 'cpool|computer01' /var/lib/backuppc/log/LOG >> email_log.temp
+/usr/sbin/ssmtp your@email.com < email_log.temp
+# /usr/sbin/ssmtp your@email.com < email_log.temp 
 rm email_log.temp
 }
 
