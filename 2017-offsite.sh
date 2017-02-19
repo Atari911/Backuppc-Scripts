@@ -9,11 +9,7 @@
 ## The main thing here is that the \\ubuntu-02 server initiates the
 ## transfer and not the offsite machine allowing for the change of 
 ## this script to point to a new/different offsite server if need be. 
-##
-## Note:
-## --chown - This arg is used to maintain the user:group on the offsite
-## server side, otherwise the UID of the user:group can be mis-applied
-## if the numbers are doifferent on the different server. 
+## 
 
 ## VARIABLES
 ##---------------------------------------------------------------------
@@ -79,6 +75,10 @@ rsync -ahH -z --delete -og --stats --exclude 'config.pl' --exclude 'htpasswd' --
 ## TRANSFER THE ACTUAL DATA TO OFFSITE
 ##--------------------------------------------------------------------- 
 ## The main command that will run the backup to \\atari911-offsite.
+## Note:
+## --chown - This arg is used to maintain the user:group on the offsite
+## server side, otherwise the UID of the user:group can be mis-applied
+## if the numbers are doifferent on the different server.
 function varlib {
 rsync -ahH -z --delete -og --stats --chown=backuppc:backuppc /var/lib/backuppc/ backuppc@atari911-offiste:/var/lib/backuppc/ >> $LOGFILE
 
