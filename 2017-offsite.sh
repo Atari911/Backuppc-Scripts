@@ -3,21 +3,24 @@
 ## OFFSITE RSYNC SCRIPT
 ##---------------------------------------------------------------------
 ## This script copies over the complete dataset of the backuppc 
-## server (\\ubuntu-02) and should be run on that server. It will
-## copy the dataset over to the offsite server (\\atari911-offsite)
+## server (SOURCE) to the offsite server (OFFSITE)
 ##
-## The main thing here is that the \\ubuntu-02 server initiates the
+## The main thing here is that the SOURCE server initiates the
 ## transfer and not the offsite machine allowing for the change of 
 ## this script to point to a new/different offsite server if need be. 
+## Im not sure if this is the best way to do this, but this is how it 
+## is being done at this time. After much testing this may be changed 
+## inthe future.
 ## 
 
 ## VARIABLES
 ##---------------------------------------------------------------------
-LOGFILE=/home/atari911/logfileOffsite.log
-ARCHIVE=/home/atari911/offsitelogs/
-DEBUG=/home/atari911/offsitelogs/debug.log
+HOME=/home/atari911
+LOGFILE=$HOME/logfileOffsite.log
+ARCHIVE=$HOME/offsitelogs/
+DEBUG=$HOME/offsitelogs/debug.log
 OFFSTSRVR="atari911-offsite.spohnhome.com"
-EMAILLOG=/home/atari911/offsitelogs/email.log
+EMAILLOG=$HOME/offsitelogs/email.log
 
 ## CREATE LOG FILE
 ##---------------------------------------------------------------------
