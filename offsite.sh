@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# Copywrite 2017 Jason Spohn 
+# Copyright 2017 Jason Spohn 
 
 ## Define the location and name of the log files.
 STATUS=/SCRIPTS/offsite_status.log
