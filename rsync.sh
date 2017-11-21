@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -avz /root/temp/ thegeekstuff@192.168.200.10:/home/thegeekstuff/temp/
+rsync -avz /var/lib/backuppc backuppc@backuppc.spohnhome.com:/var/lib/backuppc
