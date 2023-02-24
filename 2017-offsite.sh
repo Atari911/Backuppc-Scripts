@@ -19,7 +19,7 @@ HOME=/home/atari911
 LOGFILE=$HOME/logfileOffsite.log
 ARCHIVE=$HOME/offsitelogs/
 DEBUG=$HOME/offsitelogs/debug.log
-OFFSTSRVR="atari911-offsite.spohnhome.com"
+OFFSTSRVR="server-offsite"
 EMAILLOG=$HOME/offsitelogs/email.log
 
 ## CREATE LOG FILE
